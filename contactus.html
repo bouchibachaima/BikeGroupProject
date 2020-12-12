@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT US</title>
+    <!-- build:css css/main.css -->
+    <link rel="shortcout icon" type="image/x-icon" href="images/logo.jpg">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- endbuild -->
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="./index.html">BIKES & MORE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
+            aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./shop.html">SHOP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./aboutus.html">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACT<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <audio id="audio" src="images/mysound.mp3"></audio>
+            <button type="button" onclick="play()" data-toggle="modal" data-target="#loginModal"
+                class="btn btn-primary">LOGIN</button>
+        </div>
+    </nav>
+
+    <!--Login Modal-->
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                    anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Password">
+                            </div>
+                            <fieldset class="form-group">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" value="" checked="">
+                                        Remember Me
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <div class="d-flex justify-content-center links">
+                                Don't have an account? <a data-toggle="modal" data-target="#signUpModal"
+                                    href="#signUpModal"> Sign Up</a>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <a data-toggle="modal" data-target="#forgotPasswordModal" href="#forgotPasswordModal">
+                                    Forgot your password?</a>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" data-dismiss="modal">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--SignUp Modal-->
+    <div id="signUpModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Sign Up</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">First Name</label>
+                                <input type="email" class="form-control" id="exampleInputFirstName"
+                                    aria-describedby="emailHelp" placeholder="Enter your First Name Here">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Last Name</label>
+                                <input type="email" class="form-control" id="exampleInputLastName"
+                                    aria-describedby="emailHelp" placeholder="Enter your Last Name Here">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail"
+                                    aria-describedby="emailHelp" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword"
+                                    placeholder="Password">
+                            </div>
+                            <fieldset class="form-group">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" value="" checked="">
+                                        Would you like to receive our monthly Newsletter?
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" data-dismiss="modal">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Forgot Password Modal-->
+    <div id="forgotPasswordModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Forgot Password</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <fieldset>
+                            <div class="form-group has-danger">
+                                <label class="form-control-label" for="inputInvalid">Enter Your Email Address</label>
+                                <input type="text" class="form-control is-invalid" id="inputInvalid">
+                                <div class="invalid-feedback">Sorry, we could not locate your account. Try another?
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" data-dismiss="modal">Reset Your Password</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Jumbotron-->
+    <header class="jumbotron jumbotron-fluid vidj">
+        <video autoplay muted loop src="images/bikevideo.mp4" class="vid"></video>
+        <div class="container">
+            <div class="row row-header align-items-center">
+                <div class="display-3">
+                    <h1>Welcome to Bikes & More</h1>
+                    <p class="lead">THE SPIRIT TO DISCOVER THE WORLD WITH A BIKE </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--Breadcrumb-->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+            <li class="breadcrumb-item active">Contact Us</li>
+        </ol>
+    </nav>
+
+    <!--Main Content-->
+    <div class="container" style="margin-bottom:5px">
+        <div class="row row-content">
+            <div class="col-md-8 col-sm-12">
+                <h2 class="textParagraphTitle">Contact Us for more Information</h2>
+                <p class="textParagraph">Thank you for choosing Bikes & More. <br>
+                    Please fill out this form to get in touch with us with any questions you have regarding our bikes
+                    and we will get
+                    back to you within 48 business hours..</p>
+                <form action="destination" method="get">
+                    <fieldset>
+                        <div class="col-sm-12">
+
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="First Name">First Name</label>
+                                        <input type="text" class="form-control" autofocus="autofocus" required>
+                                    </div>
+
+                                    <div class="form-group col-md-6">
+                                        <label for="Last Name">Last Name</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-8">
+                                        <label for="Email Address">Email Address</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+
+                                    <div class="form-group col-md-4">
+                                        <label for="Phone Number">Phone Number</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+
+                                <label for="Address">Address</label>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <input type="text" class="form-control" placeholder="City">
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <input type="text" class="form-control" placeholder="State">
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <input type="text" class="form-control" placeholder="Zip">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label for="options">How did you hear about us?</label>
+                                        <select class="form-control" id="options">
+                                            <option>Select one</option>
+                                            <option>Online Search</option>
+                                            <option>Youtube</option>
+                                            <option>Facebook</option>
+                                            <option>Instagram</option>
+                                            <option>Linkedin</option>
+                                            <option>A Friend</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <label for="becomePartner">Please briefly describe your request </label>
+                                    <textarea class="form-control" id="becomePartner" rows="3"></textarea>
+                                </div>
+
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <br>
+
+
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="card text-white bg-warning mb-3" style="max-width: 20rem;">
+                    <div class="card-header">Contact Us</div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Athens, GREECE
+                        <p>Phone number
+                            <br>+30 69 55 48 30 97</p>
+                        <p>When to call us
+                            <br>Mon - Thu : 10:00 – 20:00
+                            <br>Fri : 10:00 – 12:30 & 14:00 – 18:00</p>
+                        <p>Email
+                            bikes&more@gmail.com</p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer ">
+        <div class="container">
+            <div class="row justify-content">
+
+                <div class="social-area">
+                    <ul>
+                        <li><a href="https://www.facebook.com" target="_blank" title="Join us on Facebook"
+                                class="shr-btn-facebook"><span>Facebook</span><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="http://instagram.com" target="_blank" title="Join us on Instagram"
+                                class="shr-btn-instagram"><span>Instagram</span><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="http://www.linkedin.com" target="_blank" title="Join us on Linkedin"
+                                class="shr-btn-linkedin"><span>Behance</span><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="http://youtube.com/" target="_blank" title="Join us on Youtube"
+                                class="shr-btn-youtube"><span>Soundcloud</span><i class="fa fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="social-area2">
+                    <ul>
+                        <li><a href="#" title="Athens, Greece" class="shr-btn-address"><span>Address</span>
+                                <i class="fa fa-map-marker"></i></a></li>
+                        <li><a href="#" title="+30 69 55 48 30 97" class="shr-btn-phone"><span>Telephone</span>
+                                <i class="fa fa-phone"></i></a></li>
+                        <li><a href="#" title="+30 69 55 48 30 94" class="shr-btn-fax"><span>Fax</span>
+                                <i class="fa fa-fax"></i></a></li>
+                        <li><a href="bouchibachaima@gmail.com" title="bouchibachaima@gmail.com"
+                                class="shr-btn-email"><span>Email</span>
+                                <i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="credits">
+            <img class="slice-footer" src="images/logo.jpg" alt="BIKES & MORE"></div>
+
+    </footer>
+
+    <!-- build:js js/main.js -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/tether/dist/js/tether.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>
